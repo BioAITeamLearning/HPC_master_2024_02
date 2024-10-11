@@ -427,11 +427,11 @@ Tres dispositivos tienen la misma frecuencia de reloj (2 GHz) y 4 núcleos de pr
 
 ```{dropdown} Solución Ejemplo 2
 
-- Celular [2 GHz * 4 núcleos * (4*2 operaciones por ciclo)]/ (10^12) = 0.064 TFlops
+- Celular 2 GHz * 4 núcleos * 4/2 operaciones por ciclo = 0.016 TFlops
 
-- Xbox [2 GHz * 4 núcleos * 6 operaciones por ciclo]/ (10^12) = 0.048 TFlops
+- Xbox 2 GHz * 4 núcleos * 6 operaciones por ciclo = 0.048 TFlops
 
-- Computador [2 GHz * 4 núcleos * (8*2 operaciones por ciclo)]/ (10^12) = 0.128 Tflops
+- Computador 2 GHz * 4 núcleos * 8/2 operaciones por ciclo = 0.032 Tflops
 
 ```
 
@@ -461,44 +461,17 @@ FLOPS_CPU = 6 núcleos × 4.1 × 10^9 Hz × 16 operaciones por ciclo = 393.6 GFL
 
 ### GPU (NVIDIA GTX 1070 Max-Q)
 
-Para calcular los FLOPS (Floating Point Operations Per Second) de una GPU, puedes seguir una fórmula similar a la que se utiliza para calcular los FLOPS en una CPU, pero con algunos ajustes específicos para las GPUs, ya que suelen tener múltiples núcleos (shaders o CUDA cores en el caso de NVIDIA, o Stream Processors en AMD) y pueden ejecutar varias operaciones de punto flotante simultáneamente.
-
-
-```
-FLOPS = Número de núcleos × Frecuencia del núcleo (en GHz) × Operaciones por ciclo
-```
-
-##### Donde:
-
-- **Número de núcleos**: Es el número de núcleos de procesamiento en la GPU. Estos son los llamados CUDA cores (NVIDIA) o Stream Processors (AMD).
-- **Frecuencia del núcleo**: La velocidad del reloj a la que operan los núcleos de la GPU. Esta se suele medir en GHz (1 GHz = 10⁹ ciclos por segundo).
-- **Operaciones por ciclo**: Cuántas operaciones de punto flotante puede realizar un núcleo en un ciclo de reloj. Esto depende del tipo de operaciones que realiza la GPU y si son de 32 bits (FP32) o de 64 bits (FP64). La mayoría de las GPUs realizan dos operaciones de coma flotante por ciclo en FP32.
-
-#### Cálculo paso a paso:
-
-#### 1. **Número de núcleos**:
-Por ejemplo, una GPU NVIDIA GTX 1070 tiene **2,048 CUDA cores**.
-
-#### 2. **Frecuencia del núcleo**:
-Supongamos que la GPU tiene una **frecuencia de 1.215 GHz**.
-
-#### 3. **Operaciones por ciclo**:
-En el caso de operaciones de punto flotante de 32 bits (FP32), cada núcleo puede realizar **dos operaciones de punto flotante por ciclo**.
-
-#### Ejemplo de cálculo para FP32:
+La **GTX 1070 Max-Q** es capaz de ofrecer hasta 6.5 teraflops de rendimiento en operaciones de punto flotante simples (FP32). Esta GPU tiene 2048 núcleos CUDA funcionando a una frecuencia de hasta 1468 MHz en modo boost.
 
 ```
-FLOPS (FP32) = 2,048 núcleos × 1.215 GHz × 2 operaciones por ciclo
-= 2,048 × 1.215 × 2
-= 4,976.64 GFLOPS
-= 4.976 TFLOPS
+FLOPS_GPU = 6.5 TFLOPS = 6500 GFLOPS
 ```
 
 ### Total FLOPS estimados (CPU + GPU):
 
 * **CPU**: 393.6 GFLOPS
-* **GPU**: 4976.64 GFLOPS
-* **Total**: Aproximadamente **5370.24 GFLOPS** (5.370 TFLOPS).
+* **GPU**: 6500 GFLOPS
+* **Total**: Aproximadamente **6893.6 GFLOPS** (6.9 TFLOPS).
 
 Este cálculo da una estimación teórica del rendimiento de la laptop en operaciones de punto flotante, tomando en cuenta tanto la CPU como la GPU.
 
@@ -539,29 +512,20 @@ FLOPS_CPU-FP64 = 6 núcleos × 4.1 × 10^9 Hz × 8 operaciones por ciclo = 196.8
 **GPU: NVIDIA GTX 1070 Max-Q**
 
 Cálculo para FP32 (32 bits):
-
-```
-FLOPS (FP32) = 2,048 núcleos × 1.215 GHz × 2 operaciones por ciclo
-= 2,048 × 1.215 × 2
-= 4,976.64 GFLOPS
-= 4.976 TFLOPS
-```
+* **Rendimiento máximo**: 6.5 TFLOPS (6500 GFLOPS) en operaciones de 32 bits (**FP32**).
 
 Cálculo para FP64 (64 bits):
 La mayoría de las GPUs orientadas a gráficos, como la GTX 1070 Max-Q, tienen un rendimiento mucho menor en FP64. El ratio típico para esta tarjeta es de **1/32** del rendimiento de FP32. Por lo tanto:
 
 ```
-FLOPS (FP64) = 2,048 núcleos × 1.215 GHz × 2/32 operaciones por ciclo
-= 2,048 × 1.215 × 0.0625
-= 155.52 GFLOPS
-= 0.155 TFLOPS
+FLOPS_GPU-FP64 = 6500 / 32 = 203.125 GFLOPS
 ```
 
 **Resumen de los resultados**
 
 | Tipo de operación | CPU (GFLOPS) | GPU (GFLOPS) | Total (GFLOPS) |
 |-------------------|--------------|--------------|----------------|
-| FP32 (32 bits)    | 393.6        | 4,976.64         | 5370.24         |
-| FP64 (64 bits)    | 196.8        | 155.52      | 352.32        |
+| FP32 (32 bits)    | 393.6        | 6500         | 6893.6         |
+| FP64 (64 bits)    | 196.8        | 203.125      | 399.925        |
 
-De esta forma, el rendimiento máximo teórico en operaciones de punto flotante de 32 bits (FP32) es aproximadamente **5370.24 GFLOPS**, mientras que para operaciones de 64 bits (FP64) sería de **352.32 GFLOPS**.
+De esta forma, el rendimiento máximo teórico en operaciones de punto flotante de 32 bits (FP32) es aproximadamente **6893.6 GFLOPS**, mientras que para operaciones de 64 bits (FP64) sería de **399.925 GFLOPS**.

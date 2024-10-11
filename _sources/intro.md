@@ -1,7 +1,7 @@
 ---
 title: Bienvenida al curso
 ---
-# Programación Concurrente y Distribuida
+# Programación Concurrente y Paralela
 
 ## El equipo!! 🦾🧠
 
@@ -32,19 +32,6 @@ title: Bienvenida al curso
 ^^^
 ```{only} html
 [<img src="https://seeklogo.com/images/G/gmail-new-2020-logo-32DBE11BB4-seeklogo.com.png" width="25" height="20">](mailto:johan.pinad@autonoma.edu.co)
-```
-:::
-
-:::{grid-item-card} Brayan Arteaga
-:class-body: text-center
-:class-header: bg-light text-center
-```{image} _static/images/hba.png
-:height: 100
-:class: rounded
-```
-^^^
-```{only} html
-[<img src="https://seeklogo.com/images/G/gmail-new-2020-logo-32DBE11BB4-seeklogo.com.png" width="25" height="20">](mailto:harold.arteagaa@autonoma.edu.co)
 ```
 :::
 ::::
@@ -92,7 +79,7 @@ Facultad de ingeniería, Ingeniería de Sistemas
 
 ## Objetivos del curso:
 
-El curso se propone enseñar los fundamentos y técnicas avanzadas de programación concurrente y distribuida, enfocándose en el diseño, implementación y optimización de sistemas software que operen eficientemente en entornos paralelos y distribuidos, preparando a los estudiantes para resolver desafíos reales en computación de alto rendimiento.
+El curso se propone enseñar los fundamentos y técnicas avanzadas de programación concurrente y paralela, enfocándose en el diseño, implementación y optimización de sistemas software que operen eficientemente en entornos distribuidos, preparando a los estudiantes para resolver desafíos reales en computación de alto rendimiento.
 
 ---
 
@@ -231,9 +218,6 @@ Inteligencia artificial (IA)
 
 ## Información del curso
 
-- Horarios de clases: Miercoles (2pm a 4pm) y jueves (4pm a 6:30pm)
-- La **dedicación** de tiempo es la base para completar con éxito el curso
-
 
 <div style="text-align: center;">
   <img src="_static/images/recomendaciones.png" />
@@ -295,21 +279,10 @@ Estas son algunas de las referencias usadas para este curso.
 
 ## Reglas de Juego 🕹️📏
 
-* Clases magistrales para conceptualización del tema
-* Quices
-* Trabajo en clase y actividades:  Notebooks y repositorios
-* Proyecto Final
+### Evaluación
+- Tareas y talleres = 60%
+- Proyecto = 40%
 
-
-::::{grid} 1
-
-:::{grid-item}
-:columns: 8
-:class: sd-m-auto
-
-<img src="_static/images/Evaluacion.png" width="600" height="400" />
-:::
-::::
 
 ---
 
