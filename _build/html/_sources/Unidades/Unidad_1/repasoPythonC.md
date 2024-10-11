@@ -1,4 +1,4 @@
-## Repaso Python y C para programación concurrente y distribuida
+## Repaso Python y C para programación concurrente y Paralela
 
 ## Colaboratory – Jupyter Notebook
 

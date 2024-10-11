@@ -1,8 +1,8 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
-title: Programación Concurrente y Distribuida 2024 - 02 Ucaldas
-author: Reinel Tabares, Johan Piña, Brayan Arteaga
+title: Programación Concurrente y Paralela 2024 - 02 Ucaldas
+author: Reinel Tabares, Johan Piña
 logo: https://avatars.githubusercontent.com/u/142033488?s=200&v=4
 copyright: "2024"
 
@@ -22,7 +22,7 @@ launch_buttons:
 
 # Information about where the book exists on the web
 repository:
-  url: https://github.com/BioAITeamLearning/ProgCD_2024_02_Ucaldas  # Online location of your book
+  url: https://github.com/BioAITeamLearning/ProgCyP_master_2024_02  # Online location of your book
   branch: main  # Which branch of the repository should be used when creating links (optional)
 
 # Add GitHub buttons to your book

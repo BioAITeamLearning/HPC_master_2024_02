@@ -1,6 +1,6 @@
 # Evaluemos lo aprendido!! 
 
-## Taller Unidad 1: Repaso Python para Programación Concurrente y Distribuida
+## Taller Unidad 1: Repaso Python para Programación Concurrente y Paralela
 
 El siguiente taller debe ser resuelto individualmente.
 Para la entrega, debe enviar un (1) solo noteook con todos los ejercicios.
